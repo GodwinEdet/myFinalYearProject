@@ -3,15 +3,12 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
 import connectDB from "./db.js";
 import predictRouter from "./routes/predict.js";
 import historyRouter from "./routes/history.js";
 
 dotenv.config();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -37,14 +34,6 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// Serve React build in production
-if (process.env.NODE_ENV === "production") {
-  const clientDist = path.join(__dirname, "../../client/dist");
-  app.use(express.static(clientDist));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(clientDist, "index.html"));
-  });
-}
 
 // Global error handler
 app.use((err, req, res, next) => {
