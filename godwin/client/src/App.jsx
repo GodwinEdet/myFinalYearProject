@@ -150,11 +150,6 @@ export default function App() {
         )}
       </main>
 
-      <footer className="footer">
-        <p>
-          Decision-support tool only. Not a substitute for clinical diagnosis.
-        </p>
-      </footer>
     </div>
   );
 }
