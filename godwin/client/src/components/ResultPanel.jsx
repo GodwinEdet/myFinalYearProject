@@ -111,12 +111,5 @@ export default function ResultPanel({ result, originalPreview }) {
         </div>
       )}
 
-      {/* Disclaimer */}
-      <div className="disclaimer">
-        <span className="disclaimer-icon">ℹ</span>
-        This result is a decision-support output. Clinical confirmation by a
-        qualified microscopist is required before treatment.
-      </div>
-    </div>
   );
 }
