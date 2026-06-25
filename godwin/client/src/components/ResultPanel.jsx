@@ -91,7 +91,7 @@ export default function ResultPanel({ result, originalPreview }) {
       )}
 
       {/* Metrics table */}
-      {result.metrics && (
+       {result.metrics && (
         <div className="metrics-section">
           <span className="section-label">Model performance metrics</span>
           <div className="metrics-grid">
@@ -110,6 +110,6 @@ export default function ResultPanel({ result, originalPreview }) {
           </div>
         </div>
       )}
-
+    </div>
   );
 }
